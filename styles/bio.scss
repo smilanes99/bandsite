@@ -1,28 +1,151 @@
+@use "../styles/partials/global" as *;
+@use "../styles/partials/variables" as *;
 
-@use '../styles/partials/global' as *;
+/* CSS FOR THE MOBILE DISPLAY */
 
+.header {
+  background-color: $primaryblack;
+  color: $primarywhite;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+.header__title {
+  text-decoration: none;
+  font-size: 2rem;
+  color: $primarywhite;
+}
 
+.header__menu-bio {
+  text-decoration: none;
+  color: $primarywhite;
+}
 
+.header__menu-shows {
+  color: $primarywhite;
+}
 
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 960px;
+  padding: 1rem;
+}
+.header__menu li {
+  margin-left: 3rem;
+  margin-right: 2rem;
+}
+.header__menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
 
-// //*
-// @media (min-width: 1280px) {body {
-//     font-size: $desktop-header-font-size;
-//     font-weight: $desktop-header--font-weight;
-//   }
-// }
+.hero {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  height: 18.75rem;
+  text-decoration: none;
+  opacity: 50%;
+}
 
-// @media (min-width: 320px) {
-//     body {
-//       font-size: $mobile-header-font-size;
-//       font-weight: $mobile-header-font-weight; } }
+.hero__text {
+  color: #fff;
+  text-decoration: none;
+  align-items: flex;
+  display: inline-flex;
+  margin-top: 9.375rem;
+  padding: 0 16px;
+  opacity: 100%;
+  h2 {
+    color: rgb(255, 255, 255);
+    opacity: 100%;
+  }
+}
+.about {
+  padding: 16px;
+}
+.about__image {
+  width: 100%;
+}
+.about__title {
+  padding-top: 24px;
+  padding-bottom: 16px;
+}
 
+.photogallery {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+}
 
-//      .photogallery {background-color: #323232;
-//     display: flex; align:row;
-// }
-// header {background-color: #323232;
-// color:#FFFFFF}
+.photogallery-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-// footer {background-color: #323232;
-// color: #FFFFFF;} //*
+.photogallery-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: $primaryblack;
+  color: $primarywhite;
+  text-decoration: none;
+  color: $primarywhite;
+  p {
+    color: $primarywhite;
+    margin-bottom: 0;
+  }
+}
+
+.footer__socialmedia {
+  a {
+    padding: 16px;
+  }
+}
+.footer__title {
+  padding-left: 16px;
+}
+.footer__manager {
+  padding-left: 16px;
+}
+.footer__manager-address {
+  padding-left: 16px;
+}
+.footer__manager-email {
+  padding-left: 16px;
+}
+.footer__bookingagent-pearl {
+  padding-left: 16px;
+}
+.footer__bookingagent-pearl-address {
+  padding-left: 16px;
+}
+.footer__bookingagent-pearl-email {
+  padding-left: 16px;
+}
+.footer__bookingagent-carson {
+  padding-left: 16px;
+}
+.footer__bookingagent-carson-address {
+  padding-left: 16px;
+}
+.footer__bookingagent-carson-email {
+  padding-left: 16px;
+}
+.footer__bookingagent-carson-email {
+  padding-left: 16px;
+}
+.footer__copyright {
+  padding-left: 16px;
+}
