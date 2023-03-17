@@ -54,11 +54,19 @@ Body {
 }
 
 .hero {
+  height: 18.75rem;
+}
+
+.hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
-  height: 18.75rem;
-  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.088);
   opacity: 50%;
+}
+
+.hero__opacity {
+  background-color: #323232;
+  z-index: 1;
 }
 
 .hero__text {
@@ -68,11 +76,12 @@ Body {
   display: inline-flex;
   margin-top: 9.375rem;
   padding: 0 16px;
-  opacity: 100%;
+  z-index: 2;
+  position: relative;
 }
-.hero__text h2 {
+
+h2 {
   color: rgb(255, 255, 255);
-  opacity: 100%;
 }
 
 .about {
@@ -86,6 +95,7 @@ Body {
 .about__title {
   padding-top: 24px;
   padding-bottom: 16px;
+  color: #323232;
 }
 
 .photogallery {
@@ -122,6 +132,7 @@ footer p {
 
 .footer__title {
   padding-left: 16px;
+  padding-top: 24px;
 }
 
 .footer__manager {
