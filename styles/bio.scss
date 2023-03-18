@@ -1,7 +1,12 @@
 @use "../styles/partials/global" as *;
 @use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
 
 /* CSS FOR THE MOBILE DISPLAY */
+
+.body {
+  display: flex;
+}
 
 .header {
   background-color: $primaryblack;
@@ -11,35 +16,48 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  width: 100%;
-  text-decoration: none;
-}
+  font-size: 60px;
+  height: 200%;
 
+  @include desktop {display: flex; justify-content: center;align-items: center;
+    
+  }
+}
+.header__content { display: flex;
+  align-items: center;}
 .header__title {
   text-decoration: none;
   font-size: 2rem;
   color: $primarywhite;
+  @include desktop {display: flex;width: 100px;
+    height: auto;
+    display: block;
+    margin-right: 16px;}
 }
 
 .header__menu-bio {
-  text-decoration: none;
-  color: $primarywhite;
+  text-underline-offset: 4px;
+  color: white;
+  display: inline-flex;
+  padding-left: 20px;
+  padding-right: 30px;
+  text-decoration: underline 3px;
+  position: relative;
+  width: 100%;
 }
 
 .header__menu-shows {
+  text-decoration: none;
   color: $primarywhite;
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
-  max-width: 960px;
   padding: 1rem;
 }
 .header__menu li {
-  margin-left: 3rem;
   margin-right: 2rem;
 }
 .header__menu {
@@ -49,34 +67,38 @@
   padding: 0;
 }
 
-.hero {
-  height: 18.75rem;
+// .hero {
+//   height: 18.75rem;
+// }
+.hero__image {
+  background-image: url("../assets/images/hero-bio.jpg");
+  background-size: cover;
+  height: 30vh;
+  position: relative;
+  background-color: black;
 }
-.hero__image
-{background-image: url("../assets/images/hero-bio.jpg");
-background-size: cover;
-background-color: rgba(0, 0, 0, 0.088);
-opacity: 50%;}
 
-.hero__opacity {background-color: $primaryblack;
-    z-index: 1;}
+.hero__opacity {
+  background-color: $primaryblack;
+  // position: absolute;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.5;
+}
 
 .hero__text {
   color: #fff;
   text-decoration: none;
   align-items: flex;
-  display: inline-flex;
   margin-top: 9.375rem;
   padding: 0 16px;
-  z-index: 2;
-  position: relative;
+  position: absolute;
+  bottom: 250px;
 }
-  h2 {
-    color: rgb(255, 255, 255);
-  }
 
 .about {
   padding: 16px;
+  @include desktop {padding-left: 80px; padding-right: 80px;}
 }
 .about__image {
   width: 100%;
@@ -84,19 +106,29 @@ opacity: 50%;}
 .about__title {
   padding-top: 24px;
   padding-bottom: 16px;
-  color: $primaryblack;
 }
-
+.about__description {@include desktop {display: flex; flex-direction: row;}}
+.about__bandbio {
+  display: flex;
+  flex-direction: column;
+}
 .photogallery {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 16px;
+  @include desktop {
+    justify-content: center;
+  }
 }
 
 .photogallery-item {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 2%;
+  @include desktop {
+    width: 21%;
+  }
 }
 
 .photogallery-item img {
@@ -109,51 +141,20 @@ footer {
   color: $primarywhite;
   text-decoration: none;
   color: $primarywhite;
-  p {
-    color: $primarywhite;
-    margin-bottom: 0;
+  @include desktop {
+    display: flex;
+    
   }
 }
 
 .footer__socialmedia {
   a {
-    padding: 16px;
+    padding-right: 16px;
   }
 }
 .footer__title {
-  padding-left: 16px;
   padding-top: 24px;
 }
-.footer__manager {
-  padding-left: 16px;
-}
-.footer__manager-address {
-  padding-left: 16px;
-}
-.footer__manager-email {
-  padding-left: 16px;
-}
-.footer__bookingagent-pearl {
-  padding-left: 16px;
-}
-.footer__bookingagent-pearl-address {
-  padding-left: 16px;
-}
-.footer__bookingagent-pearl-email {
-  padding-left: 16px;
-}
-.footer__bookingagent-carson {
-  padding-left: 16px;
-}
-.footer__bookingagent-carson-address {
-  padding-left: 16px;
-}
-.footer__bookingagent-carson-email {
-  padding-left: 16px;
-}
-.footer__bookingagent-carson-email {
-  padding-left: 16px;
-}
-.footer__copyright {
+.footer__text {
   padding-left: 16px;
 }

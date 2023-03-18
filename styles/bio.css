@@ -5,6 +5,10 @@ Body {
 }
 
 /* CSS FOR THE MOBILE DISPLAY */
+.body {
+  display: flex;
+}
+
 .header {
   background-color: #323232;
   color: #FFFFFF;
@@ -13,8 +17,20 @@ Body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  width: 100%;
-  text-decoration: none;
+  font-size: 60px;
+  height: 200%;
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header__content {
+  display: flex;
+  align-items: center;
 }
 
 .header__title {
@@ -22,27 +38,41 @@ Body {
   font-size: 2rem;
   color: #FFFFFF;
 }
+@media screen and (min-width: 1280px) {
+  .header__title {
+    display: flex;
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-right: 16px;
+  }
+}
 
 .header__menu-bio {
-  text-decoration: none;
-  color: #FFFFFF;
+  text-underline-offset: 4px;
+  color: white;
+  display: inline-flex;
+  padding-left: 20px;
+  padding-right: 30px;
+  -webkit-text-decoration: underline 3px;
+          text-decoration: underline 3px;
+  position: relative;
+  width: 100%;
 }
 
 .header__menu-shows {
+  text-decoration: none;
   color: #FFFFFF;
 }
 
 .header__nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
   width: 100%;
-  max-width: 960px;
   padding: 1rem;
 }
 
 .header__menu li {
-  margin-left: 3rem;
   margin-right: 2rem;
 }
 
@@ -53,39 +83,39 @@ Body {
   padding: 0;
 }
 
-.hero {
-  height: 18.75rem;
-}
-
 .hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
-  background-color: rgba(0, 0, 0, 0.088);
-  opacity: 50%;
+  height: 30vh;
+  position: relative;
+  background-color: black;
 }
 
 .hero__opacity {
   background-color: #323232;
-  z-index: 1;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.5;
 }
 
 .hero__text {
   color: #fff;
   text-decoration: none;
   align-items: flex;
-  display: inline-flex;
   margin-top: 9.375rem;
   padding: 0 16px;
-  z-index: 2;
-  position: relative;
-}
-
-h2 {
-  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 250px;
 }
 
 .about {
   padding: 16px;
+}
+@media screen and (min-width: 1280px) {
+  .about {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
 }
 
 .about__image {
@@ -95,19 +125,41 @@ h2 {
 .about__title {
   padding-top: 24px;
   padding-bottom: 16px;
-  color: #323232;
+}
+
+@media screen and (min-width: 1280px) {
+  .about__description {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.about__bandbio {
+  display: flex;
+  flex-direction: column;
 }
 
 .photogallery {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   padding: 16px;
+}
+@media screen and (min-width: 1280px) {
+  .photogallery {
+    justify-content: center;
+  }
 }
 
 .photogallery-item {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin: 2%;
+}
+@media screen and (min-width: 1280px) {
+  .photogallery-item {
+    width: 21%;
+  }
 }
 
 .photogallery-item img {
@@ -121,60 +173,20 @@ footer {
   text-decoration: none;
   color: #FFFFFF;
 }
-footer p {
-  color: #FFFFFF;
-  margin-bottom: 0;
+@media screen and (min-width: 1280px) {
+  footer {
+    display: flex;
+  }
 }
 
 .footer__socialmedia a {
-  padding: 16px;
+  padding-right: 16px;
 }
 
 .footer__title {
-  padding-left: 16px;
   padding-top: 24px;
 }
 
-.footer__manager {
-  padding-left: 16px;
-}
-
-.footer__manager-address {
-  padding-left: 16px;
-}
-
-.footer__manager-email {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-pearl {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-pearl-address {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-pearl-email {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-carson {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-carson-address {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-carson-email {
-  padding-left: 16px;
-}
-
-.footer__bookingagent-carson-email {
-  padding-left: 16px;
-}
-
-.footer__copyright {
+.footer__text {
   padding-left: 16px;
 }/*# sourceMappingURL=bio.css.map */
