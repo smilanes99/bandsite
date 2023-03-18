@@ -2,120 +2,81 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
-/* CSS FOR THE MOBILE DISPLAY */
 
 .body {
   display: flex;
 }
 
-.header {
-  background-color: $primaryblack;
-  color: $primarywhite;
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  @include desktop {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.header__content {
-  align-items: center;
-}
-.header__title {
-  text-decoration: none;
-  font-size: 2rem;
-  color: $primarywhite;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  @include desktop {
-    display: flex;
-    width: 100px;
-    height: auto;
-    display: block;
-    margin-right: 16px;
-  }
-}
-
-.header__menu-bio {
-  text-underline-offset: 4px;
-  color: white;
-  display: inline-flex;
-  padding-left: 20px;
-  padding-right: 30px;
-  text-decoration: underline 3px;
-  position: relative;
-  width: 100%;
-}
-
-.header__menu-shows {
-  text-decoration: none;
-  color: $primarywhite;
-}
-
-.header__nav {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 1rem;
-}
-.header__menu li {
-  margin-right: 2rem;
-}
-.header__menu {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-// .hero {
-//   height: 18.75rem;
-// }
 .hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
-  height: 30vh;
-  position: relative;
   background-color: black;
+  height: 35vh;
+  position: relative;
+  @include desktop {
+    height: 30vh;
+  }
 }
 
 .hero__opacity {
   background-color: $primaryblack;
-  // position: absolute;
   background-size: cover;
   height: 100%;
   opacity: 0.5;
+  position: relative;
 }
 
 .hero__text {
   color: #fff;
   text-decoration: none;
-  align-items: flex;
-  margin-top: 9.375rem;
-  padding: 0 16px;
-  position: absolute;
-  bottom: 50px;
+  position: relative;
+  left: 0.5rem;
+  display: flex;
+  bottom: auto;
+  top: -70%;
+  margin-right: 0.3125rem;
+
+  @include desktop {
+    font-size: 5rem;
+    display: flex;
+    bottom: auto;
+    top: -50%;
+    margin-left: 6.5rem;
+    font-weight: 600;
+  }
 }
 
 .about {
-  padding: 16px;
+  padding: 1rem;
   @include desktop {
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    margin: 1rem;
   }
 }
 .about__image {
   width: 100%;
 }
-.about__title {
-  padding-top: 24px;
-  padding-bottom: 16px;
+.about__title { color:#323232;
+  font-weight: 600;
+  @include desktop {
+    position: relative;
+    left: -1.25rem;
+    font-size: 2.25rem;
+    font-weight: 500;
+  }
+}
+.about__quote {color:#323232;
+  font-weight: 500;
+  @include desktop {
+    margin-right: 80px;
+    padding-right: 200px;
+    font-weight: 400;
+  }
+}
+
+.about__quote-bryan {
+  margin-bottom: 50px;
 }
 .about__description {
   @include desktop {
@@ -123,17 +84,39 @@
     flex-direction: row;
   }
 }
-.about__bandbio {
+.about__bandbio {color:#323232;
   display: flex;
   flex-direction: column;
+  @include desktop {
+    margin: right 1rem;
+  }
 }
-.photogallery {
+.about__bandname { font-size: 1rem;color:#323232; font-weight: 600;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.photogallery {color:#323232;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  padding: 16px;
+  padding: 1rem;
   @include desktop {
     justify-content: center;
+  }
+}
+.photogallery__title {
+  padding-left: 1.25rem;
+  font-weight: 500;
+  position: relative;
+  top: 20px;
+  @include desktop {
+    display: flex;
+    position: relative;
+    margin-left: 11.8rem;
+    font-weight: 400;
+    font-size: 30px;
   }
 }
 
@@ -160,8 +143,16 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    height: 15vh;
   }
 }
+.footer__bookingagent-pearl-name,
+.footer__bookingagent-carson-name,
+.footer__manager-name {
+  padding-top: 1.25rem;
+  font-weight: 500;
+}
+
 .footer__bookingagent-carson-email,
 .footer__bookingagent-pearl-email {
   color: $primarywhite;
@@ -169,16 +160,69 @@ footer {
 }
 
 .footer__socialmedia {
+  @include desktop {
+    position: absolute;
+    bottom: -11rem;
+    left: 27.5rem;
+  }
   a {
-    padding-right: 16px;
+    padding-right: 1rem;
   }
 }
 .footer__title {
-  padding-top: 24px;
+  padding-top: 1.5rem;
+  @include desktop {
+    position: relative;
+    bottom: 5rem;
+    display: inline-flex;
+    left: 10.9375rem;
+    margin-bottom: 7.5rem;
+    white-space: nowrap;
+  }
 }
 .footer__text {
-  padding-left: 16px;
-  @include desktop {display: flex;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+
+  @include desktop {
+    display: flex;
     justify-content: space-between;
-    align-items: center;}
+    align-items: center;
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+.footer__get-in-touch-section {
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: top;
+    align-items: center;
+    font-size: 1.25rem;
+  }
+}
+.footer__manager,
+.footer__bookingagent-pearl {
+  @include desktop {
+    padding-right: 3.4375rem;
+  }
+}
+.footer__logo {
+  margin-top: 2rem;
+  @include desktop {
+    display: flex;
+    position: relative;
+    left: 9.375rem;
+    margin: 1rem;
+    bottom: 7.5rem;
+  }
+}
+.footer__copyright {
+  font-size: small;
+  @include desktop {
+    position: relative;
+    white-space: nowrap;
+    right: 27.5rem;
+    top: 3.75rem;
+  }
 }
