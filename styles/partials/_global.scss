@@ -1,4 +1,4 @@
-@use "../partials/typography" as *;
+@use 'typography' as *;
 @use "../partials/variables" as *;
 @use "../partials/mixins" as *;
 
@@ -14,18 +14,20 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-  
+    @include tablet{flex-direction: row;}
     @include desktop {
       display: flex;
       justify-content: center;
       align-items: center;
     }
+
   }
   .header__content {
     align-items: center;
     display: flex;
     flex-direction: column;
-  
+    @include tablet {flex-direction: row;
+    display: inline-flex; align-items: flex-end;}
     @include desktop {
       margin-left: -50rem;
       flex-direction: row;
@@ -51,9 +53,15 @@
   
   .header__menu-bio {
     text-underline-offset: 2.1875rem;
+    text-decoration: underline 10px white;
     color: white;
     display: inline-flex;
     border-bottom: #fff solid 0.125rem;
+    @include tablet {
+        margin-left: 50px;
+        margin-bottom: 30px;
+        border-bottom: none;
+        }
     @include desktop {
       padding-left: 2.8125rem;
       text-decoration: underline 3px;

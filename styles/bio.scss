@@ -1,4 +1,4 @@
-@use "../styles/partials/global" as *;
+@use 'partials/global' as *;
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
@@ -35,7 +35,7 @@
   bottom: auto;
   top: -70%;
   margin-right: 0.3125rem;
-
+  @include tablet { font-size: 3.75rem;font-weight: 600;}
   @include desktop {
     font-size: 5rem;
     display: flex;
@@ -48,6 +48,7 @@
 
 .about {
   padding: 1rem;
+  @include tablet{}
   @include desktop {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -56,6 +57,8 @@
 }
 .about__image {
   width: 100%;
+  @include tablet {margin: auto;
+  width:80%;margin-left: 50px;}
 }
 .about__title { color:#323232;
   font-weight: 600;
@@ -68,6 +71,10 @@
 }
 .about__quote {color:#323232;
   font-weight: 500;
+  @include tablet {margin-left: 50px;
+    margin-right: 30px;
+    padding-right: 70px;
+    font-weight: 600;}
   @include desktop {
     margin-right: 80px;
     padding-right: 200px;
@@ -77,8 +84,13 @@
 
 .about__quote-bryan {
   margin-bottom: 50px;
+  @include tablet {margin-left: 50px;}
 }
 .about__description {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+  }
   @include desktop {
     display: flex;
     flex-direction: row;
@@ -87,11 +99,13 @@
 .about__bandbio {color:#323232;
   display: flex;
   flex-direction: column;
+  @include tablet {margin: 30px;}
   @include desktop {
     margin: right 1rem;
   }
 }
 .about__bandname { font-size: 1rem;color:#323232; font-weight: 600;
+  @include tablet {margin-left: 30px; font-size: 24px;margin-bottom: 5px;}
   @include desktop {
     display: flex;
     flex-direction: row;
@@ -102,6 +116,7 @@
   flex-wrap: wrap;
   gap: 10px;
   padding: 1rem;
+  @include tablet {justify-content: center; }
   @include desktop {
     justify-content: center;
   }
@@ -111,6 +126,7 @@
   font-weight: 500;
   position: relative;
   top: 20px;
+  @include tablet {}
   @include desktop {
     display: flex;
     position: relative;
@@ -124,6 +140,7 @@
   display: flex;
   justify-content: center;
   margin: 2%;
+  @include desktop {width: calc(33.33% - 20px);}
   @include desktop {
     width: 21%;
   }
