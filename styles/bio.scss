@@ -1,7 +1,6 @@
-@use 'partials/global' as *;
+@use "partials/global" as *;
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
-
 
 .body {
   display: flex;
@@ -11,10 +10,13 @@
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-color: black;
-  height: 35vh;
+  height: 40vh;
   position: relative;
+  @include tablet {
+    height: 40vh;
+  }
   @include desktop {
-    height: 30vh;
+    height: 40vh;
   }
 }
 
@@ -30,25 +32,32 @@
   color: #fff;
   text-decoration: none;
   position: relative;
-  left: 0.5rem;
   display: flex;
   bottom: auto;
-  top: -70%;
-  margin-right: 0.3125rem;
-  @include tablet { font-size: 3.75rem;font-weight: 600;}
+  top: -65%;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0.625rem;
+
+  @include tablet {
+    font-size: 3.75rem;
+    font-weight: 600;
+    margin-top: 9.375rem;
+  }
   @include desktop {
     font-size: 5rem;
     display: flex;
     bottom: auto;
-    top: -50%;
     margin-left: 6.5rem;
     font-weight: 600;
+    margin-top: 100px;
   }
 }
 
 .about {
   padding: 1rem;
-  @include tablet{}
+  @include tablet {
+  }
   @include desktop {
     padding-left: 5rem;
     padding-right: 5rem;
@@ -57,10 +66,18 @@
 }
 .about__image {
   width: 100%;
-  @include tablet {margin: auto;
-  width:80%;margin-left: 50px;}
+  @include tablet {
+    margin: auto;
+    height: 21.875rem;
+    width: 83%;
+    margin-left: 3.125rem;
+  }
+  @include desktop {
+    height: auto;
+  }
 }
-.about__title { color:#323232;
+.about__title {
+  color: $primaryblack;
   font-weight: 600;
   @include desktop {
     position: relative;
@@ -69,22 +86,28 @@
     font-weight: 500;
   }
 }
-.about__quote {color:#323232;
+.about__quote {
+  color: $primaryblack;
   font-weight: 500;
-  @include tablet {margin-left: 50px;
-    margin-right: 30px;
-    padding-right: 70px;
-    font-weight: 600;}
+  @include tablet {
+    margin-left: 3.125rem;
+    margin-right: 1.25rem;
+    padding-right: 3.125rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
   @include desktop {
-    margin-right: 80px;
-    padding-right: 200px;
-    font-weight: 400;
+    margin-right: 5rem;
+    padding-right: 12.5rem;
+    font-weight: 500;
   }
 }
 
-.about__quote-bryan {
-  margin-bottom: 50px;
-  @include tablet {margin-left: 50px;}
+.about__quote-author {
+  margin-bottom: 3.125rem;
+  @include tablet {
+    margin-left: 3.125rem;
+  }
 }
 .about__description {
   @include tablet {
@@ -96,150 +119,77 @@
     flex-direction: row;
   }
 }
-.about__bandbio {color:#323232;
+.about__bandbio {
+  color: $primaryblack;
   display: flex;
   flex-direction: column;
-  @include tablet {margin: 30px;}
+  @include tablet {
+    margin: 1.875rem;
+  }
   @include desktop {
     margin: right 1rem;
   }
 }
-.about__bandname { font-size: 1rem;color:#323232; font-weight: 600;
-  @include tablet {margin-left: 30px; font-size: 24px;margin-bottom: 5px;}
+.about__bandname {
+  font-size: 1rem;
+  color: $primaryblack;
+  font-weight: 600;
+  @include tablet {
+    margin-left: 1.875rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.3125rem;
+  }
   @include desktop {
     display: flex;
     flex-direction: row;
   }
 }
-.photogallery {color:#323232;
+.gallery {
+  color: $primaryblack;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
   padding: 1rem;
-  @include tablet {justify-content: center; }
+  background-color: $altbackground;
+  @include tablet {
+    justify-content: center;
+    display: flex;
+  }
   @include desktop {
     justify-content: center;
   }
 }
-.photogallery__title {
+.gallery__title {
   padding-left: 1.25rem;
   font-weight: 500;
   position: relative;
-  top: 20px;
-  @include tablet {}
+  top: 1.25rem;
+  @include tablet {
+    display: flex;
+    position: relative;
+    margin-left: 3rem;
+    font-weight: 400;
+    font-size: 1.875rem;
+  }
   @include desktop {
     display: flex;
     position: relative;
-    margin-left: 11.8rem;
-    font-weight: 400;
-    font-size: 30px;
+    margin-left: 5.8rem;
+    font-weight: 600;
+    font-size: 1.875rem;
   }
 }
 
-.photogallery-item {
+.gallery__item {
   display: flex;
   justify-content: center;
   margin: 2%;
-  @include desktop {width: calc(33.33% - 20px);}
-  @include desktop {
-    width: 21%;
+  @include tablet {
+    width: 25%;
   }
 }
 
-.photogallery-item img {
+.gallery__item img {
   max-width: 100%;
   height: auto;
-}
-
-footer {
-  background-color: $primaryblack;
-  color: $primarywhite;
-  text-decoration: none;
-  color: $primarywhite;
-  @include desktop {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 15vh;
-  }
-}
-.footer__bookingagent-pearl-name,
-.footer__bookingagent-carson-name,
-.footer__manager-name {
-  padding-top: 1.25rem;
-  font-weight: 500;
-}
-
-.footer__bookingagent-carson-email,
-.footer__bookingagent-pearl-email {
-  color: $primarywhite;
-  text-decoration: none;
-}
-
-.footer__socialmedia {
-  @include desktop {
-    position: absolute;
-    bottom: -11rem;
-    left: 27.5rem;
-  }
-  a {
-    padding-right: 1rem;
-  }
-}
-.footer__title {
-  padding-top: 1.5rem;
-  @include desktop {
-    position: relative;
-    bottom: 5rem;
-    display: inline-flex;
-    left: 10.9375rem;
-    margin-bottom: 7.5rem;
-    white-space: nowrap;
-  }
-}
-.footer__text {
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-
-  @include desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 1.5rem;
-  }
-}
-.footer__get-in-touch-section {
-  @include desktop {
-    display: flex;
-    justify-content: space-between;
-    vertical-align: top;
-    align-items: center;
-    font-size: 1.25rem;
-  }
-}
-.footer__manager,
-.footer__bookingagent-pearl {
-  @include desktop {
-    padding-right: 3.4375rem;
-  }
-}
-.footer__logo {
-  margin-top: 2rem;
-  @include desktop {
-    display: flex;
-    position: relative;
-    left: 9.375rem;
-    margin: 1rem;
-    bottom: 7.5rem;
-  }
-}
-.footer__copyright {
-  font-size: small;
-  @include desktop {
-    position: relative;
-    white-space: nowrap;
-    right: 27.5rem;
-    top: 3.75rem;
-  }
 }

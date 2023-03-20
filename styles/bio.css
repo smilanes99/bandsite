@@ -31,6 +31,7 @@
 body {
   font-family: "Avenir Next", sans-serif;
   margin: 0;
+  padding: 0;
 }
 
 .header {
@@ -64,13 +65,17 @@ body {
   .header__content {
     flex-direction: row;
     display: inline-flex;
-    align-items: flex-end;
+    align-items: baseline;
+    margin-left: 50px;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__content {
-    margin-left: -50rem;
     flex-direction: row;
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+    right: 300px;
   }
 }
 
@@ -119,6 +124,7 @@ body {
 .header__menu-shows {
   text-decoration: none;
   color: #FFFFFF;
+  font-weight: 300;
 }
 
 .header__nav {
@@ -130,6 +136,8 @@ body {
 
 .header__menu li {
   margin-right: 2rem;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .header__menu {
@@ -137,6 +145,195 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
+}
+
+footer {
+  background-color: #323232;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1280px) {
+  footer {
+    display: flex;
+    height: 20vh;
+  }
+}
+
+.footer__text {
+  margin-left: 10px;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 300;
+}
+@media screen and (min-width: 768px) {
+  .footer__text {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__text {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__socialmedia {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    flex-direction: row;
+    left: 250px;
+    bottom: 55px;
+    position: relative;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__socialmedia {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    flex-direction: row;
+    position: relative;
+    left: 31.25rem;
+    bottom: 8.4375rem;
+  }
+}
+
+a {
+  padding-right: 1rem;
+}
+@media screen and (min-width: 768px) {
+  a {
+    margin-right: 0.625rem;
+  }
+}
+
+.footer__title {
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__title {
+    font-size: 1.875rem;
+    font-weight: 600;
+    align-self: flex-start;
+    margin-left: 2.1875rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__title {
+    font-size: 1.875rem;
+    font-weight: 400;
+    align-self: flex-start;
+    position: relative;
+    bottom: 5rem;
+    left: 12.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__manager,
+  .footer__bookingagent-pearl,
+  .footer__bookingagent-carson {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__manager,
+  .footer__bookingagent-pearl,
+  .footer__bookingagent-carson {
+    width: -moz-max-content;
+    width: max-content;
+    margin-left: 1.25rem;
+  }
+}
+
+.footer__logo {
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .footer__logo {
+    margin-top: 3.5rem;
+    left: 37.5rem;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__logo {
+    margin-top: -0.625rem;
+    left: 65.625rem;
+    position: absolute;
+  }
+}
+
+.footer__copyright {
+  font-size: small;
+}
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    position: relative;
+    margin-bottom: 1.25rem;
+    left: 2.5rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__copyright {
+    left: 15rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__containers {
+    display: inline-flex;
+    margin-right: 1.25rem;
+    justify-content: space-around;
+    margin-bottom: 3.125rem;
+    margin-left: 1.25rem;
+    white-space: nowrap;
+    padding-left: 1.25rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer__containers {
+    display: inline-flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.25rem;
+    margin-top: 3.125rem;
+    right: 1.5625rem;
+    position: relative;
+  }
+}
+
+.footer__bookingagent-pearl-name,
+.footer__bookingagent-carson-name,
+.footer__manager-name {
+  font-weight: 500;
+  white-space: nowrap;
+  margin-right: 1.25rem;
+}
+
+.footer__bookingagent-carson-email,
+.footer__bookingagent-pearl-email {
+  color: #FFFFFF;
+  text-decoration: none;
+  margin-bottom: -0.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__bookingagent-carson-container {
+    padding-left: 1.5625rem;
+  }
 }
 
 .body {
@@ -147,12 +344,17 @@ body {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-color: black;
-  height: 35vh;
+  height: 40vh;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero__image {
+    height: 40vh;
+  }
 }
 @media screen and (min-width: 1280px) {
   .hero__image {
-    height: 30vh;
+    height: 40vh;
   }
 }
 
@@ -168,16 +370,18 @@ body {
   color: #fff;
   text-decoration: none;
   position: relative;
-  left: 0.5rem;
   display: flex;
   bottom: auto;
-  top: -70%;
-  margin-right: 0.3125rem;
+  top: -65%;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0.625rem;
 }
 @media screen and (min-width: 768px) {
   .hero__text {
     font-size: 3.75rem;
     font-weight: 600;
+    margin-top: 9.375rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -185,9 +389,9 @@ body {
     font-size: 5rem;
     display: flex;
     bottom: auto;
-    top: -50%;
     margin-left: 6.5rem;
     font-weight: 600;
+    margin-top: 100px;
   }
 }
 
@@ -208,8 +412,14 @@ body {
 @media screen and (min-width: 768px) {
   .about__image {
     margin: auto;
-    width: 80%;
-    margin-left: 50px;
+    height: 21.875rem;
+    width: 83%;
+    margin-left: 3.125rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .about__image {
+    height: auto;
   }
 }
 
@@ -232,26 +442,27 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__quote {
-    margin-left: 50px;
-    margin-right: 30px;
-    padding-right: 70px;
+    margin-left: 3.125rem;
+    margin-right: 1.25rem;
+    padding-right: 3.125rem;
     font-weight: 600;
+    font-size: 1.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .about__quote {
-    margin-right: 80px;
-    padding-right: 200px;
-    font-weight: 400;
+    margin-right: 5rem;
+    padding-right: 12.5rem;
+    font-weight: 500;
   }
 }
 
-.about__quote-bryan {
-  margin-bottom: 50px;
+.about__quote-author {
+  margin-bottom: 3.125rem;
 }
 @media screen and (min-width: 768px) {
-  .about__quote-bryan {
-    margin-left: 50px;
+  .about__quote-author {
+    margin-left: 3.125rem;
   }
 }
 
@@ -275,7 +486,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__bandbio {
-    margin: 30px;
+    margin: 1.875rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -291,9 +502,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .about__bandname {
-    margin-left: 30px;
-    font-size: 24px;
-    margin-bottom: 5px;
+    margin-left: 1.875rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.3125rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -303,166 +514,63 @@ body {
   }
 }
 
-.photogallery {
+.gallery {
   color: #323232;
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 0.625rem;
   padding: 1rem;
+  background-color: #FAFAFA;
 }
 @media screen and (min-width: 768px) {
-  .photogallery {
+  .gallery {
     justify-content: center;
+    display: flex;
   }
 }
 @media screen and (min-width: 1280px) {
-  .photogallery {
+  .gallery {
     justify-content: center;
   }
 }
 
-.photogallery__title {
+.gallery__title {
   padding-left: 1.25rem;
   font-weight: 500;
   position: relative;
-  top: 20px;
+  top: 1.25rem;
 }
-@media screen and (min-width: 1280px) {
-  .photogallery__title {
+@media screen and (min-width: 768px) {
+  .gallery__title {
     display: flex;
     position: relative;
-    margin-left: 11.8rem;
+    margin-left: 3rem;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__title {
+    display: flex;
+    position: relative;
+    margin-left: 5.8rem;
+    font-weight: 600;
+    font-size: 1.875rem;
   }
 }
 
-.photogallery-item {
+.gallery__item {
   display: flex;
   justify-content: center;
   margin: 2%;
 }
-@media screen and (min-width: 1280px) {
-  .photogallery-item {
-    width: calc(33.33% - 20px);
-  }
-}
-@media screen and (min-width: 1280px) {
-  .photogallery-item {
-    width: 21%;
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    width: 25%;
   }
 }
 
-.photogallery-item img {
+.gallery__item img {
   max-width: 100%;
   height: auto;
-}
-
-footer {
-  background-color: #323232;
-  color: #FFFFFF;
-  text-decoration: none;
-  color: #FFFFFF;
-}
-@media screen and (min-width: 1280px) {
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    height: 15vh;
-  }
-}
-
-.footer__bookingagent-pearl-name,
-.footer__bookingagent-carson-name,
-.footer__manager-name {
-  padding-top: 1.25rem;
-  font-weight: 500;
-}
-
-.footer__bookingagent-carson-email,
-.footer__bookingagent-pearl-email {
-  color: #FFFFFF;
-  text-decoration: none;
-}
-
-@media screen and (min-width: 1280px) {
-  .footer__socialmedia {
-    position: absolute;
-    bottom: -11rem;
-    left: 27.5rem;
-  }
-}
-.footer__socialmedia a {
-  padding-right: 1rem;
-}
-
-.footer__title {
-  padding-top: 1.5rem;
-}
-@media screen and (min-width: 1280px) {
-  .footer__title {
-    position: relative;
-    bottom: 5rem;
-    display: inline-flex;
-    left: 10.9375rem;
-    margin-bottom: 7.5rem;
-    white-space: nowrap;
-  }
-}
-
-.footer__text {
-  padding-left: 1rem;
-  padding-bottom: 1rem;
-}
-@media screen and (min-width: 1280px) {
-  .footer__text {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    padding: 1.5rem;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .footer__get-in-touch-section {
-    display: flex;
-    justify-content: space-between;
-    vertical-align: top;
-    align-items: center;
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .footer__manager,
-  .footer__bookingagent-pearl {
-    padding-right: 3.4375rem;
-  }
-}
-
-.footer__logo {
-  margin-top: 2rem;
-}
-@media screen and (min-width: 1280px) {
-  .footer__logo {
-    display: flex;
-    position: relative;
-    left: 9.375rem;
-    margin: 1rem;
-    bottom: 7.5rem;
-  }
-}
-
-.footer__copyright {
-  font-size: small;
-}
-@media screen and (min-width: 1280px) {
-  .footer__copyright {
-    position: relative;
-    white-space: nowrap;
-    right: 27.5rem;
-    top: 3.75rem;
-  }
 }/*# sourceMappingURL=bio.css.map */
