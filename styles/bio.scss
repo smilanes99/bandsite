@@ -10,13 +10,13 @@
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
   background-color: black;
-  height: 40vh;
+  height: 60vw;
   position: relative;
   @include tablet {
-    height: 40vh;
+    height: 40vw;
   }
   @include desktop {
-    height: 40vh;
+    height: 40vw;
   }
 }
 

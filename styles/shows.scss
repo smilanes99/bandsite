@@ -1,0 +1,52 @@
+@use "partials/global" as *;
+@use "../styles/partials/variables" as *;
+@use "../styles/partials/mixins" as *;
+
+
+.hero__image {
+    background-image: url("../assets/images/hero-shows.jpg");
+    background-size: cover;
+    height: 60vw;
+    position: relative;
+    @include tablet {
+      height: 40vw;
+    }
+    @include desktop {
+      height: 40vw;
+    }
+  }
+  
+  .hero__opacity {
+    background-color: $primaryblack;
+    background-size: cover;
+    height: 100%;
+    opacity: 50%;
+    position: relative;
+  }
+  
+  .hero__text {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    bottom: auto;
+    top: -85%;
+    font-weight: 400;
+    margin: 0.625rem;
+  
+    @include tablet {
+      font-size: 3.75rem;
+      font-weight: 600;
+      margin-top: 9.375rem;
+    }
+    @include desktop {
+      font-size: 5rem;
+      display: flex;
+      bottom: auto;
+      margin-left: 6.5rem;
+      font-weight: 600;
+      margin-top: 100px;
+    }
+  }
+ 
+  
