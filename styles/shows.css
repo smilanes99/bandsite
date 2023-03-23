@@ -207,8 +207,8 @@ footer {
   }
 }
 
-.footer__socialmedia {
-  padding-bottom: 10px;
+.footer__socialmedia img {
+  margin-right: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer__socialmedia {
@@ -367,8 +367,10 @@ footer {
 
 .hero__image {
   background-image: url("../assets/images/hero-shows.jpg");
+  background-color: black;
   background-size: cover;
-  height: 60vw;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
 }
 @media screen and (min-width: 768px) {
@@ -382,23 +384,24 @@ footer {
   }
 }
 
+.hero__soundCloud {
+  padding: 10px;
+}
+
 .hero__opacity {
-  background-color: #323232;
-  background-size: cover;
-  height: 100%;
-  opacity: 50%;
-  position: relative;
+  background-size: 500px;
+  background-color: red;
+  opacity: 0.5;
 }
 
 .hero__text {
-  color: #fff;
+  color: #FFFFFF;
   text-decoration: none;
   position: relative;
   display: flex;
   bottom: auto;
   top: -85%;
   font-weight: 400;
-  margin: 0.625rem;
 }
 @media screen and (min-width: 768px) {
   .hero__text {

@@ -207,8 +207,8 @@ footer {
   }
 }
 
-.footer__socialmedia {
-  padding-bottom: 10px;
+.footer__socialmedia img {
+  margin-right: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer__socialmedia {

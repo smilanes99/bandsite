@@ -152,7 +152,9 @@ footer {
 }
 
 .footer__socialmedia {
-  padding-bottom: 10px;
+
+  img {margin-right:20px;}
+  
   @include tablet {
     display: inline-flex;
     flex-wrap: nowrap;
