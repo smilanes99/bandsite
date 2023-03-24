@@ -37,6 +37,7 @@
     text-decoration: none;
     position: relative;
     display: flex;
+    margin-top: 20px;
     bottom: auto;
     top: -85%;
     font-weight: 400;
@@ -56,4 +57,54 @@
     }
   }
  
-  
+  .showSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Define styles for the card element */
+.card {
+    border-bottom: 2px solid $mercurycolor;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Define styles for the card content */
+.card p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define styles for the date element */
+.card .date {
+    font-size: 12px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+/* Define styles for the venue element */
+.card .venue {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+/* Define styles for the location element */
+.card .location {
+    font-size: 12px;
+    margin-bottom: 10px;
+    
+}
+
+.button {
+  background-color: $primaryblack;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 80px;
+}
+.card .dateTitle,.venueTitle, .locationTitle { font-size: 11px;
+  color:$secondarysilver;
+  font-weight: 400;
+}
