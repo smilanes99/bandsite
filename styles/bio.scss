@@ -1,5 +1,5 @@
 @use "partials/global" as *;
-@use "../styles/partials/variables" as *;
+@use "partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
 .body {
@@ -16,7 +16,7 @@
     height: 40vw;
   }
   @include desktop {
-    height: 40vw;
+    height: 50vw;
   }
 }
 
@@ -42,7 +42,6 @@
   @include tablet {
     font-size: 3.75rem;
     font-weight: 600;
-    margin-top: 9.375rem;
   }
   @include desktop {
     font-size: 5rem;
@@ -199,31 +198,31 @@
 .comments__container {
   display: flex;
   flex-wrap: wrap;
-  padding:10px;
-  border-bottom: 2px solid red;
+  padding: 10px;
   width: 100%;
-  @include tablet {margin-left: 30px;}
+  @include tablet {
+    margin-left: 30px;
+    padding-top: 30px;
+    width: 90%;
+  }
+  @include tablet {padding:30px;}
 
-  
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: $primaryblack;
     font-weight: 500;
-@include desktop {
-font-size: 34px;
-
-
-}
-    
+    @include desktop {
+      font-size: 34px;
+    }
   }
 
   .comments__form {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border-bottom: 2px solid #E1E1E1;
-    width: 150%;
+    border-bottom: 2px solid #e1e1e1;
+    width: 100%;
     @include desktop {
       width: 50%;
       margin-top: 50px;
@@ -237,7 +236,7 @@ font-size: 34px;
       padding: 10px;
       border-radius: 5px;
       border: 1px solid #ccc;
-      background-color: rgb(250 250 250);;
+      background-color: rgb(250 250 250);
       font-size: 12px;
       width: 75%;
       margin-left: 10px;
@@ -266,7 +265,7 @@ font-size: 34px;
       color: $secondarysilver;
       display: flex;
       margin-left: 60px;
-      padding:5px;
+      padding: 5px;
       font-weight: 600;
     }
 
@@ -293,11 +292,16 @@ font-size: 34px;
     width: 75%;
     margin-left: 60px;
     margin-bottom: 40px;
-    border:  none;
-    @include tablet { width: 20%;
-      margin-left: 465px;}
-    @include desktop { width: 25%; height: 30%;
-        margin-left: 400px;}
+    border: none;
+    @include tablet {
+      width: 20%;
+      margin-left: 440px;
+    }
+    @include desktop {
+      width: 25%;
+      height: 100%;
+    margin-left: 335px;
+    }
 
     &:hover {
       background-color: darkblue;
@@ -306,45 +310,68 @@ font-size: 34px;
 }
 // Comments section styling
 
+// class of comments is for the entire comment section including all three comments
 .comments {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
   padding: 10px;
-  border-bottom:  2px solid #E1E1E1;;
-    
-    &__name {
-      font-weight: bold;
-      margin-bottom: 5px;
-      
-      &::before {
-        content: "";
-        display: inline-block;
-        width: 8px;
-        height: 8px;
-        background-color: #ccc;
-        border-radius: 50%;
-        margin-right: 5px;
-      }
-    }
-    
-    &__date {
-      font-size: 14px;
-      color: #ccc;
-      align-self: flex-end;
-    }
-    
-    &__comment {
-      margin-top: 10px;
-    }
+  font-size: 12px;
+
+  @include tablet {
+    padding: 70px;
+    padding-top: 30px;
+    font-size: 16px;
+    padding-bottom: 30px;
   }
-  .commentImg {
-    float: right;
-    margin-left: 20px;
+  @include desktop {
+    margin-left: 0;
+    padding:335px ;
+    padding-top: 0;
+    padding-bottom: 30px;
+}
+}
+// class of comment is for each individual comment
+.comment {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.commentDate {
+  color: $secondarysilver;
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 400;
+  margin-left: 90px;
+
+  @include tablet {
+    margin-left: 350px;
   }
-  .comment {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    padding: 10px;
-    border-bottom:  2px solid #E1E1E1;}
+}
+
+.commentImg {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.commentName {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-weight: 500;
+
+  @include tablet {
+    margin-top: 5px;
+  }
+}
+
+.commentText {
+  margin-left: 50px;
+}
