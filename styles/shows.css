@@ -141,6 +141,7 @@ body {
   width: 50%;
   border-bottom: 2px solid #323232;
   padding-bottom: 1rem;
+  color: #E1E1E1;
 }
 .header__menu-list--active {
   color: white;
@@ -187,6 +188,7 @@ footer {
   padding-bottom: 10px;
   flex-direction: column;
   align-items: flex-start;
+  gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer__text {
@@ -242,6 +244,7 @@ footer {
 .footer__title {
   padding-top: 1.5rem;
   padding-bottom: 10px;
+  font-weight: 500;
 }
 @media screen and (min-width: 768px) {
   .footer__title {
@@ -286,7 +289,6 @@ footer {
 
 .footer__logo {
   margin-top: 2rem;
-  padding-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
@@ -304,7 +306,7 @@ footer {
 }
 
 .footer__copyright {
-  font-size: small;
+  font-size: 11px;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
@@ -365,6 +367,11 @@ footer {
   }
 }
 
+.hero {
+  background-color: black;
+  z-index: 0;
+}
+
 .hero__image {
   background-image: url("../assets/images/hero-shows.jpg");
   background-color: black;
@@ -372,6 +379,7 @@ footer {
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
+  z-index: 0;
 }
 @media screen and (min-width: 768px) {
   .hero__image {
@@ -386,12 +394,14 @@ footer {
 
 .hero__soundCloud {
   padding: 10px;
+  z-index: 10;
 }
 
 .hero__opacity {
   background-size: 500px;
   background-color: red;
   opacity: 0.5;
+  z-index: 0;
 }
 
 .hero__text {
@@ -403,6 +413,7 @@ footer {
   bottom: auto;
   top: -85%;
   font-weight: 400;
+  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .hero__text {
@@ -427,7 +438,6 @@ footer {
   flex-wrap: wrap;
 }
 
-/* Define styles for the card element */
 .card {
   border-bottom: 2px solid #E1E1E1;
   margin-top: 10px;
@@ -439,26 +449,22 @@ footer {
   height: fit-content;
 }
 
-/* Define styles for the card content */
 .card p {
   margin: 0;
   padding: 0;
 }
 
-/* Define styles for the date element */
 .card .date {
   font-size: 12px;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
-/* Define styles for the venue element */
 .card .venue {
   font-size: 12px;
   margin-bottom: 5px;
 }
 
-/* Define styles for the location element */
 .card .location {
   font-size: 12px;
   margin-bottom: 10px;
@@ -469,6 +475,7 @@ footer {
   color: white;
   border-radius: 5px;
   padding: 10px 80px;
+  border: none;
 }
 
 .card .dateTitle, .venueTitle, .locationTitle {

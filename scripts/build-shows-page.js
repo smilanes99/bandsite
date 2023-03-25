@@ -110,7 +110,6 @@ showCards(shows)
             card.appendChild(locationTitleElement);
             card.appendChild(locationElement);
             card.appendChild(buttonElement);
-    
             showSection.appendChild(card);
         }
     }

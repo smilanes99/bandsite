@@ -141,6 +141,7 @@ body {
   width: 50%;
   border-bottom: 2px solid #323232;
   padding-bottom: 1rem;
+  color: #E1E1E1;
 }
 .header__menu-list--active {
   color: white;
@@ -187,6 +188,7 @@ footer {
   padding-bottom: 10px;
   flex-direction: column;
   align-items: flex-start;
+  gap: 20px;
 }
 @media screen and (min-width: 768px) {
   .footer__text {
@@ -242,6 +244,7 @@ footer {
 .footer__title {
   padding-top: 1.5rem;
   padding-bottom: 10px;
+  font-weight: 500;
 }
 @media screen and (min-width: 768px) {
   .footer__title {
@@ -286,7 +289,6 @@ footer {
 
 .footer__logo {
   margin-top: 2rem;
-  padding-bottom: 10px;
 }
 @media screen and (min-width: 768px) {
   .footer__logo {
@@ -304,7 +306,7 @@ footer {
 }
 
 .footer__copyright {
-  font-size: small;
+  font-size: 11px;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
@@ -607,16 +609,38 @@ footer {
 .comments__container {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 20px;
+  padding: 10px;
+  border-bottom: 2px solid red;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .comments__container {
+    margin-left: 30px;
+  }
 }
 .comments__container h2 {
   font-size: 24px;
   margin-bottom: 20px;
+  color: #323232;
+  font-weight: 500;
+}
+@media screen and (min-width: 1280px) {
+  .comments__container h2 {
+    font-size: 34px;
+  }
 }
 .comments__container .comments__form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  border-bottom: 2px solid #E1E1E1;
+  width: 150%;
+}
+@media screen and (min-width: 1280px) {
+  .comments__container .comments__form {
+    width: 50%;
+    margin-top: 50px;
+  }
 }
 .comments__container .comments__form label {
   display: flex;
@@ -626,10 +650,10 @@ footer {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: #E1E1E1;
+  background-color: rgb(250, 250, 250);
   font-size: 12px;
-  width: 70%;
-  margin-left: 20px;
+  width: 75%;
+  margin-left: 10px;
 }
 .comments__container .comments__form input[name=name]:focus {
   outline: none;
@@ -639,19 +663,21 @@ footer {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  background-color: rgba(214, 214, 214, 0.427);
+  background-color: rgb(250, 250, 250);
   font-size: 12px;
-  width: 70%;
+  width: 75%;
   height: 100%;
   padding-bottom: 100px;
-  margin-left: 70px;
+  margin-left: 60px;
 }
 .comments__container .comments__form .comments__label-name,
 .comments__container .comments__form .comments__label-comment {
-  font-size: 12px;
+  font-size: 11px;
   color: #AFAFAF;
   display: flex;
-  margin-left: 80px;
+  margin-left: 60px;
+  padding: 5px;
+  font-weight: 600;
 }
 .comments__container .comments__form .input-with-icon {
   display: flex;
@@ -659,19 +685,77 @@ footer {
 }
 .comments__container .comments__form .input-with-icon img {
   margin-right: 10px;
-  width: 15%;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
 }
 .comments__container button {
   padding: 10px;
   border-radius: 5px;
-  background-color: blue;
+  background-color: #323232;
   color: white;
   font-size: 16px;
   cursor: pointer;
-  width: calc(100% - 20px);
+  width: 75%;
+  margin-left: 60px;
+  margin-bottom: 40px;
   border: none;
+}
+@media screen and (min-width: 768px) {
+  .comments__container button {
+    width: 20%;
+    margin-left: 465px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comments__container button {
+    width: 25%;
+    height: 30%;
+    margin-left: 400px;
+  }
 }
 .comments__container button:hover {
   background-color: darkblue;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 2px solid #E1E1E1;
+}
+.comments__name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.comments__name::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+.comments__date {
+  font-size: 14px;
+  color: #ccc;
+  align-self: flex-end;
+}
+.comments__comment {
+  margin-top: 10px;
+}
+
+.commentImg {
+  float: right;
+  margin-left: 20px;
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 2px solid #E1E1E1;
 }/*# sourceMappingURL=bio.css.map */
