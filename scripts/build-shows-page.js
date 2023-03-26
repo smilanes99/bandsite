@@ -60,7 +60,7 @@ showSelector.appendChild(showSection);
 
 showSection.classList.add ("showSection")
 
-showCards(shows)
+
 
 // function showCards(showsArray) {
     

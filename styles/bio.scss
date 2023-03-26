@@ -49,7 +49,7 @@
     bottom: auto;
     margin-left: 6.5rem;
     font-weight: 600;
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
 }
 
@@ -199,34 +199,34 @@
 .comments__container {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: .625rem;
   width: 100%;
   @include tablet {
-    margin-left: 30px;
-    padding-top: 30px;
+    margin-left: 1.875rem;
+    padding-top: 1.875rem;
     width: 90%;
   }
-  @include tablet {padding:30px;}
+  @include tablet {padding:1.875rem;}
 
   h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
     color: $primaryblack;
     font-weight: 500;
     @include desktop {
-      font-size: 34px;
+      font-size: 2.125rem;
     }
   }
 
   .comments__form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    border-bottom: 2px solid #e1e1e1;
+    gap: 1.25rem;
+    border-bottom: .125rem solid #e1e1e1;
     width: 100%;
     @include desktop {
       width: 50%;
-      margin-top: 50px;
+      margin-top: 3.125rem;
     }
     label {
       display: flex;
@@ -234,13 +234,13 @@
     }
 
     input[name="name"] {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      padding: .625rem;
+      border-radius: .3125rem;
+      border: .0625rem solid #ccc;
       background-color: rgb(250 250 250);
-      font-size: 12px;
+      font-size: .75rem;
       width: 75%;
-      margin-left: 10px;
+      margin-left: .625rem;
 
       &:focus {
         outline: none;
@@ -249,24 +249,24 @@
     }
 
     input[name="comment"] {
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+      padding: .625rem;
+      border-radius: .3125rem;
+      border: .0625rem solid #ccc;
       background-color: rgb(250 250 250);
-      font-size: 12px;
+      font-size: .75rem;
       width: 75%;
       height: 100%;
-      padding-bottom: 100px;
-      margin-left: 60px;
+      padding-bottom: 6.25rem;
+      margin-left: 3.75rem;
     }
 
     .comments__label-name,
     .comments__label-comment {
-      font-size: 11px;
+      font-size: .6875rem;
       color: $secondarysilver;
       display: flex;
-      margin-left: 60px;
-      padding: 5px;
+      margin-left: 3.75rem;
+      padding: .3125rem;
       font-weight: 600;
     }
 
@@ -275,7 +275,7 @@
       align-items: center;
 
       img {
-        margin-right: 10px;
+        margin-right: .625rem;
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
@@ -284,24 +284,24 @@
   }
 
   button {
-    padding: 10px;
-    border-radius: 5px;
+    padding: .625rem;
+    border-radius: .3125rem;
     background-color: $primaryblack;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     width: 75%;
-    margin-left: 60px;
-    margin-bottom: 40px;
+    margin-left: 3.75rem;
+    margin-bottom: 2.5rem;
     border: none;
     @include tablet {
       width: 20%;
-      margin-left: 440px;
+      margin-left: 27.5rem;
     }
     @include desktop {
       width: 25%;
       height: 100%;
-    margin-left: 335px;
+    margin-left: 20.9375rem;
     }
 
     &:hover {
@@ -315,20 +315,20 @@
 .comments {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  font-size: 12px;
+  padding: .625rem;
+  font-size: .75rem;
 
   @include tablet {
-    padding: 70px;
-    padding-top: 30px;
-    font-size: 16px;
-    padding-bottom: 30px;
+    padding: 4.375rem;
+    padding-top: 1.875rem;
+    font-size: 1rem;
+    padding-bottom: 1.875rem;
   }
   @include desktop {
     margin-left: 0;
-    padding:335px ;
+    padding:20.9375rem ;
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 1.875rem;
 }
 }
 // class of comment is for each individual comment
@@ -337,9 +337,9 @@
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-bottom: 2px solid #e1e1e1;
+  margin-bottom: .625rem;
+  padding: .3125rem;
+  border-bottom: .125rem solid #e1e1e1;
 }
 
 .commentDate {
@@ -347,32 +347,32 @@
   display: flex;
   justify-content: flex-end;
   font-weight: 400;
-  margin-left: 90px;
+  margin-left: 5.625rem;
 
   @include tablet {
-    margin-left: 350px;
+    margin-left: 21.875rem;
   }
 }
 
 .commentImg {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: flex-start;
-  margin-right: 10px;
+  margin-right: .625rem;
   border-radius: 50%;
 }
 .commentName {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: .625rem;
   font-weight: 500;
 
   @include tablet {
-    margin-top: 5px;
+    margin-top: .3125rem;
   }
 }
 
 .commentText {
-  margin-left: 50px;
+  margin-left: 3.125rem;
 }

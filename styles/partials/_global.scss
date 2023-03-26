@@ -23,14 +23,15 @@ body {
     flex-direction: row;
     display: flex;
     width: 100%;
-    height: 60px;
+    height: 3.75rem;
     align-items: flex-end;
   }
   @include desktop {
     flex-direction: row;
     display: flex;
     width: 100%;
-    height: 5vh;
+    height: 5.5vh;
+    padding-left: 3.75rem;
     align-items: flex-end;
   }
 }
@@ -45,18 +46,18 @@ body {
     flex-direction: row;
     display: inline-flex;
     align-items: baseline;
-    margin-left: 50px;
+    margin-left: -6.25rem;
   }
   @include desktop {
     flex-direction: row;
     display: inline-flex;
     align-items: baseline;
-    margin-right: 400px;
+    margin-right: 25rem;
     width:50%;
   }
 }
 
-.header__logo {margin-left: 10px;}
+.header__logo {margin-left: .625rem;}
 
 .header__title {
   text-decoration: none;
@@ -80,8 +81,8 @@ body {
     display: flex;
     text-decoration: none;
     justify-content: flex-start;
-    width:80%;
-    margin-left: 10px;
+    width:40%;
+    margin-left: .625rem;
     
     
   }
@@ -100,27 +101,18 @@ body {
   padding: 1rem;
 }
 
-// .header__menu {
-//   list-style: none;
-//   display: flex;
-//   width: 100%;
-//   flex-wrap: wrap;
-//   justify-content: center;
-//   color:#E1E1E1;
-// }
-
 .header__menu-list {
-  width: 50%;
-  border-bottom: 2px solid $primaryblack;
+  width: 40%;
+  border-bottom: .125rem solid $primaryblack;
   padding-bottom: 1rem;
   
   &--active {
     color:white;
     border-color:white;
     @include tablet {width: fit-content;
-    border-bottom: 4px solid white;}
+    border-bottom: .25rem solid white;}
   @include desktop {width: fit-content;
-    border-bottom: 4px solid white;}
+    border-bottom: .25rem solid white;}
   }
 }
 footer {
@@ -138,15 +130,15 @@ footer {
 }
 
 .footer__text {
-  margin-left: 10px;
+  margin-left: .625rem;
   padding-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   font-weight: 300;
-  padding-bottom: 10px;
+  padding-bottom: .625rem;
   flex-direction: column;
   align-items: flex-start;
-  gap: 20px;
+  gap: 1.25rem;
 
   @include tablet {
     flex-direction: row;
@@ -159,18 +151,19 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    margin-top: 60px;
+    margin-top: 5.625rem;
     width:100%;
+    margin-left: -4.375rem;
   }
 }
 
 .footer__socialmedia {
 
-  img {margin-right:20px;}
+  img {margin-right:1.25rem;}
   
   @include tablet {
-    left: 250px;
-    bottom: 40px;
+    left: 15.625rem;
+    bottom: 2.5rem;
     position: relative;
   }
   @include desktop {
@@ -183,11 +176,14 @@ a {
   @include tablet {
     margin-right: 0.625rem;
   }
+  @include desktop {
+    margin-right: 1.625rem;
+  }
 }
 
 .footer__title {
   padding-top: 1.5rem;
-  padding-bottom: 10px;
+  padding-bottom: .625rem;
   font-weight: 500;
 
   @include tablet {
@@ -208,7 +204,7 @@ a {
 .footer__manager,
 .footer__bookingagent-pearl,
 .footer__bookingagent-carson {
-  padding-bottom:10px;
+  padding-bottom:.625rem;
   @include tablet {
     width: 50%;
   }
@@ -220,18 +216,18 @@ a {
 .footer__logo {
   margin-top: 2rem;
   @include tablet {
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
     left: 37.5rem;
     position: absolute;
   }
   @include desktop {
-    margin-top: -0.625rem;
+    margin-top: -1.625rem;
     left: 65.625rem;
     position: absolute;
   }
 }
 .footer__copyright {
-  font-size: 11px;
+  font-size: .6875rem;
   @include tablet {
     position: relative;
     margin-bottom: 1.25rem;
@@ -239,6 +235,7 @@ a {
   }
   @include desktop {
     margin-left: 13rem;
+    font-size: .75rem;
   }
 }
 .footer__containers {
@@ -266,15 +263,15 @@ a {
   font-weight: 500;
   white-space: nowrap;
   margin-right: 1.25rem;
-  padding-bottom: 10px;
+  padding-bottom: .625rem;
 }
 .footer__manager-email,
 .footer__bookingagent-carson-email,
 .footer__bookingagent-pearl-email {
   color: $primarywhite;
   text-decoration: none;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: .625rem;
+  margin-bottom: .625rem;
 }
 .footer__bookingagent-carson-container {
   @include tablet {
