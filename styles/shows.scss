@@ -2,99 +2,123 @@
 @use "../styles/partials/variables" as *;
 @use "../styles/partials/mixins" as *;
 
-
-.hero {background-color: black;
-z-index: 0;}
-
 .hero__image {
-    background-image: url("../assets/images/hero-shows.jpg");
-    background-color: black;
-    background-size: cover;
-    height: fit-content;
-    position: relative;
-    z-index: 0;
-    @include tablet {
-      height: 40vw;
-    }
-    @include desktop {
-      height: 40vw;
-    }
-  }
-  .hero__soundCloud{
-    padding:10px;
-    z-index: 10;
+  background-image: url("../assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-color: black;
+  height: fit-content;
+  position: relative;
 
+  @include tablet {
+    height: 40vh;
   }
-  .hero__opacity {
-    background-size: 500px;
-    background-color: red;
-    opacity: .5;
-    z-index: 0;
-    
+  @include desktop {
+    height: fit-content;
   }
-  
-  .hero__text {
-    color: $primarywhite;
-    text-decoration: none;
-    position: relative;
-    display: flex;
+}
+.hero__sound-cloud {
+  padding: 10px;
+  z-index: 10;
+  position: relative;
+
+  @include tablet {
+    padding-right: 120px;
+    padding-left: 20px;
+  }
+}
+
+.hero__sound-cloud-player {
+  @include tablet {
+    width: 65%;
+    height: 10vh;
     margin-top: 20px;
-    bottom: auto;
-    top: -85%;
-    font-weight: 400;
-    z-index: 1;
-    
-    @include tablet {
-      font-size: 3.75rem;
-      font-weight: 600;
-      margin-top: 9.375rem;
-    }
-    @include desktop {
-      font-size: 5rem;
-      display: flex;
-      bottom: auto;
-      margin-left: 6.5rem;
-      font-weight: 600;
-      margin-top: 100px;
-    }
   }
- 
-  .showSection {
+}
+
+.hero__opacity {
+  background-color: $primaryblack;
+  background-size: cover;
+  height: 100%;
+  opacity: 0.5;
+  position: relative;
+}
+
+.hero__text {
+  color: $primarywhite;
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  bottom: auto;
+  top: -85%;
+  font-weight: 400;
+
+  @include tablet {
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 40px;
+  }
+  @include desktop {
+    font-size: 5rem;
     display: flex;
-    flex-wrap: wrap;
+    bottom: auto;
+    margin-left: 6.5rem;
+    font-weight: 600;
+    margin-top: 100px;
+  }
+}
+.hero__text strong {
+  @include tablet {
+    margin-top: -40px;
+    font-size: 64px;
+    font-weight: 600;
+  }
 }
 
+.showSection {
+  display: flex;
+  flex-wrap: wrap;
+  @include tablet {margin-top: 100px;}
+}
+.shows__title {display: none;
+@include tablet {display:contents;
+font-size: 46px; font-weight: 400;
+padding-top: 50px;
+}}
 .card {
-    border-bottom: 2px solid $mercurycolor;
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 20px;
-    width: fit-content;
-    height: fit-content;
-}
+  border-bottom: 2px solid $mercurycolor;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 20px;
+  width: fit-content;
+  height: fit-content;
 
+  @include tablet {display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  width:100%;
+justify-content: space-evenly;}
+}
 
 .card p {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-
 .card .date {
-    font-size: 12px;
-    margin-bottom: 10px;
-    font-weight: 600;
+  font-size: 12px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .card .venue {
-    font-size: 12px;
-    margin-bottom: 5px;
+  font-size: 12px;
+  margin-bottom: 5px;
 }
 
 .card .location {
-    font-size: 12px;
-    margin-bottom: 10px;
-    
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .button {
@@ -102,9 +126,13 @@ z-index: 0;}
   color: white;
   border-radius: 5px;
   padding: 10px 80px;
-  border:  none;
+  border: none;
 }
-.card .dateTitle,.venueTitle, .locationTitle { font-size: 11px;
-  color:$secondarysilver;
+.card .dateTitle,
+.venueTitle,
+.locationTitle {
+  font-size: 11px;
+  color: $secondarysilver;
   font-weight: 400;
+  @include tablet {display: none;}
 }

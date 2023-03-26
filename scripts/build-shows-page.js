@@ -103,6 +103,7 @@ showCards(shows)
             buttonElement.classList.add('button');
             buttonElement.textContent = 'BUY TICKETS';
     
+
             card.appendChild(dateTitleElement);
             card.appendChild(dateElement);
             card.appendChild(venueTitleElement);

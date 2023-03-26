@@ -68,13 +68,13 @@ body {
 }
 
 .header__menu {
-  color: white;
+  color: $mercurycolor;
   display: flex;
   text-decoration: none;
   width: 100%;
   flex-wrap: wrap;
-    list-style: none;
-
+  list-style: none;
+  justify-content: space-around;
   @include tablet {
     border-bottom: none;
     display: flex;
@@ -113,7 +113,7 @@ body {
   width: 50%;
   border-bottom: 2px solid $primaryblack;
   padding-bottom: 1rem;
-  color: #E1E1E1;
+  
   &--active {
     color:white;
     border-color:white;
