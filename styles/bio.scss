@@ -9,11 +9,10 @@
 .hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
-  background-color: black;
   height: 60vw;
   position: relative;
   @include tablet {
-    height: 40vw;
+    height: 50vw;
   }
   @include desktop {
     height: 50vw;
@@ -42,6 +41,8 @@
   @include tablet {
     font-size: 3.75rem;
     font-weight: 600;
+    top: -45%;
+
   }
   @include desktop {
     font-size: 5rem;
@@ -50,9 +51,9 @@
     margin-left: 6.5rem;
     font-weight: 600;
     margin-top: 6.25rem;
+    
   }
 }
-
 
 .about {
   padding: 1rem;
@@ -83,7 +84,8 @@
     position: relative;
     left: -1.25rem;
     font-size: 2.25rem;
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 30px;
   }
 }
 .about__quote {
@@ -123,6 +125,8 @@
   color: $primaryblack;
   display: flex;
   flex-direction: column;
+  margin-top: .625rem;
+
   @include tablet {
     margin: 1.875rem;
   }
@@ -133,7 +137,7 @@
 .about__bandname {
   font-size: 1rem;
   color: $primaryblack;
-  font-weight: 600;
+  font-weight: 500;
   @include tablet {
     margin-left: 1.875rem;
     font-size: 1.5rem;
@@ -199,22 +203,21 @@
 .comments__container {
   display: flex;
   flex-wrap: wrap;
-  padding: .625rem;
+  padding: 0.625rem;
   width: 100%;
   @include tablet {
     margin-left: 1.875rem;
     padding-top: 1.875rem;
     width: 90%;
   }
-  @include tablet {padding:1.875rem;}
+  @include tablet {
+    padding: 1.875rem;
+  }
+  }
 
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-    color: $primaryblack;
-    font-weight: 500;
+  .comments__container-title {
     @include desktop {
-      font-size: 2.125rem;
+      margin-left: 30px;
     }
   }
 
@@ -222,7 +225,7 @@
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    border-bottom: .125rem solid #e1e1e1;
+    border-bottom: 0.125rem solid #e1e1e1;
     width: 100%;
     @include desktop {
       width: 50%;
@@ -234,26 +237,22 @@
     }
 
     input[name="name"] {
-      padding: .625rem;
-      border-radius: .3125rem;
-      border: .0625rem solid #ccc;
+      padding: 0.625rem;
+      border-radius: 0.3125rem;
+      border: 0.0625rem solid #ccc;
       background-color: rgb(250 250 250);
-      font-size: .75rem;
+      font-size: 0.75rem;
       width: 75%;
-      margin-left: .625rem;
+      margin-left: 0.625rem; 
 
-      &:focus {
-        outline: none;
-        border-color: blue;
-      }
     }
 
     input[name="comment"] {
-      padding: .625rem;
-      border-radius: .3125rem;
-      border: .0625rem solid #ccc;
+      padding: 0.625rem;
+      border-radius: 0.3125rem;
+      border: 0.0625rem solid #ccc;
       background-color: rgb(250 250 250);
-      font-size: .75rem;
+      font-size: 0.75rem;
       width: 75%;
       height: 100%;
       padding-bottom: 6.25rem;
@@ -262,11 +261,11 @@
 
     .comments__label-name,
     .comments__label-comment {
-      font-size: .6875rem;
+      font-size: 0.6875rem;
       color: $secondarysilver;
       display: flex;
       margin-left: 3.75rem;
-      padding: .3125rem;
+      padding: 0.3125rem;
       font-weight: 600;
     }
 
@@ -275,7 +274,7 @@
       align-items: center;
 
       img {
-        margin-right: .625rem;
+        margin-right: 0.625rem;
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
@@ -284,10 +283,10 @@
   }
 
   button {
-    padding: .625rem;
-    border-radius: .3125rem;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
     background-color: $primaryblack;
-    color: white;
+    color: $primarywhite;
     font-size: 1rem;
     cursor: pointer;
     width: 75%;
@@ -296,27 +295,21 @@
     border: none;
     @include tablet {
       width: 20%;
-      margin-left: 27.5rem;
+      margin-left: 25.5rem;
     }
     @include desktop {
       width: 25%;
       height: 100%;
-    margin-left: 20.9375rem;
-    }
-
-    &:hover {
-      background-color: darkblue;
+      margin-left: 20.9375rem;
     }
   }
-}
-// Comments section styling
 
-// class of comments is for the entire comment section including all three comments
+// Comments section styling-----------------------------
 .comments {
   display: flex;
   flex-direction: column;
-  padding: .625rem;
-  font-size: .75rem;
+  padding: 0.625rem;
+  font-size: 0.75rem;
 
   @include tablet {
     padding: 4.375rem;
@@ -326,20 +319,21 @@
   }
   @include desktop {
     margin-left: 0;
-    padding:20.9375rem ;
+    padding: 20.9375rem;
     padding-top: 0;
     padding-bottom: 1.875rem;
-}
+  }
 }
 // class of comment is for each individual comment
+
 .comment {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-bottom: .625rem;
-  padding: .3125rem;
-  border-bottom: .125rem solid #e1e1e1;
+  margin-bottom: 0.625rem;
+  padding: 0.3125rem;
+  border-bottom: 0.125rem solid #e1e1e1;
 }
 
 .commentDate {
@@ -359,17 +353,17 @@
   height: 2.5rem;
   display: flex;
   justify-content: flex-start;
-  margin-right: .625rem;
+  margin-right: 0.625rem;
   border-radius: 50%;
 }
 .commentName {
   display: flex;
   align-items: center;
-  margin-top: .625rem;
+  margin-top: 0.625rem;
   font-weight: 500;
 
   @include tablet {
-    margin-top: .3125rem;
+    margin-top: 0.3125rem;
   }
 }
 

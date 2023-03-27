@@ -1,52 +1,52 @@
 
 
 const shows = [
-    {   dateTitle: "Date",
+    {   dateTitle: "DATE",
         date: 'Mon Sept 06 2021',
-        venueTitle: "Venue",
+        venueTitle: "VENUE",
         venue: 'Madison Square Garden',
-        locationTitle: "Location",
+        locationTitle: "LOCATION",
         location: 'San Francisco, CA'
         
     },
     {
-        dateTitle: "Date",
+        dateTitle: "DATE",
         date: 'Tue Sept 21 2021',
-        venueTitle: "Venue",
+        venueTitle: "VENUE",
         venue: 'Pier 3 East',
-        locationTitle: "Location",
+        locationTitle: "LOCATION",
         location: 'San Francisco, CA'
     },
     {
-        dateTitle: "Date",
+        dateTitle: "DATE",
         date: 'Fri Oct 15 2021',
-        venueTitle: "Venue",
+        venueTitle: "VENUE",
         venue: 'View Lounge',
-        locationTitle: "Location",
+        locationTitle: "LOCATION",
         location: 'San Francisco, CA'
     },
     {
-        dateTitle: "Date",
+        dateTitle: "DATE",
         date: 'Sat Nov 06 2021',
-        venueTitle: "Venue",
+        venueTitle: "VENUE",
         venue: 'Hyatt Agency',
-        locationTitle: "Location",
+        locationTitle: "LOCATION",
         location: 'San Francisco, CA'
     },
     {
-        dateTitle: "Date",
+        dateTitle: "DATE",
         date: 'Fri Nov 26 2021',
-        venueTitle: "Venue",
+        venueTitle: "VENUE",
         venue: 'Moscow Center',
-        locationTitle: "Location",
+        locationTitle: "LOCATION",
         location: 'San Francisco, CA'
     },
     {
-        dateTitle: "Date",
+        dateTitle: "DATE",
         date: 'Wed Dec 15 2021',
-        venueTitle: "Venue",
+        venueTitle: "VENUE",
         venue: 'Press Club',
-        locationTitle: "Location",
+        locationTitle: "LOCATION",
         location: 'San Francisco, CA'
     },
 ];
@@ -62,14 +62,6 @@ showSection.classList.add ("showSection")
 
 
 
-// function showCards(showsArray) {
-    
-
-//     for (let i = 0; i < showsArray.length; i++) {
-//         const card= document.createElement('div');
-//         card.classList.add('card');
-//         showSection.appendChild(card)
-//     }
     function showCards(showsArray) {
         for (let i = 0; i < showsArray.length; i++) {
             const card = document.createElement('div');

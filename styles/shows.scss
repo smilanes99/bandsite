@@ -9,7 +9,7 @@
   position: relative;
 
   @include tablet {
-    height: 40vh;
+    height: 45vh;
   }
   @include desktop {
     height: 50vh;
@@ -30,6 +30,7 @@
 }
 
 .hero__sound-cloud-player {
+  height: 6.25rem;
   @include tablet {
     width: 65%;
     height: 10vh;
@@ -60,6 +61,7 @@
   bottom: auto;
   top: -85%;
   font-weight: 400;
+  padding-right: 5rem;
 
   @include tablet {
     font-weight: 600;
@@ -91,8 +93,10 @@
   display: flex;
   flex-wrap: wrap;
   color: $primaryblack;
+  
   @include tablet {
     margin-top: 3.75rem;
+    margin-left: .375rem;
   }
   @include desktop {
     display: flex;
@@ -101,7 +105,7 @@
   }
 }
 .shows__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
   margin-left: 10px;
   margin-top: 20px;
@@ -126,6 +130,7 @@
 
 .shows__dvl {
   display: none;
+  
   @include tablet {
     display: flex;
     flex-direction: row;
@@ -195,13 +200,13 @@
   border-radius: .3125rem;
   padding: .625rem 6rem;
   border: none;
-@include tablet {padding: .625rem 1.875rem;}
+@include tablet {padding: 0.725rem 1.575rem;}
   @include desktop {padding: .625rem 1.25rem;}
 }
 .card .dateTitle,
 .venueTitle,
 .locationTitle {
-  font-size: .6875rem;
+  font-size: .50rem;
   color: $secondarysilver;
   font-weight: 400;
   @include tablet {

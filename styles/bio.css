@@ -40,7 +40,7 @@ body {
 
 .header {
   background-color: #323232;
-  color: #E1E1E1;
+  color: #e1e1e1;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -145,21 +145,21 @@ body {
   padding-bottom: 1rem;
 }
 .header__menu-list--active {
-  color: white;
-  border-color: white;
+  color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .header__menu-list--active {
     width: -moz-fit-content;
     width: fit-content;
-    border-bottom: 0.25rem solid white;
+    border-bottom: 0.25rem solid #FFFFFF;
   }
 }
 @media screen and (min-width: 1280px) {
   .header__menu-list--active {
     width: -moz-fit-content;
     width: fit-content;
-    border-bottom: 0.25rem solid white;
+    border-bottom: 0.25rem solid #FFFFFF;
   }
 }
 
@@ -309,13 +309,13 @@ footer {
 @media screen and (min-width: 768px) {
   .footer__copyright {
     position: relative;
-    margin-bottom: 1.25rem;
     left: 2.5rem;
+    margin-top: -40px;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer__copyright {
-    margin-left: 13rem;
+    margin-left: 13.5rem;
     font-size: 0.75rem;
   }
 }
@@ -373,13 +373,12 @@ footer {
 .hero__image {
   background-image: url("../assets/images/hero-bio.jpg");
   background-size: cover;
-  background-color: black;
   height: 60vw;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .hero__image {
-    height: 40vw;
+    height: 50vw;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -411,6 +410,7 @@ footer {
   .hero__text {
     font-size: 3.75rem;
     font-weight: 600;
+    top: -45%;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -461,7 +461,8 @@ footer {
     position: relative;
     left: -1.25rem;
     font-size: 2.25rem;
-    font-weight: 500;
+    font-weight: 600;
+    margin-bottom: 30px;
   }
 }
 
@@ -512,6 +513,7 @@ footer {
   color: #323232;
   display: flex;
   flex-direction: column;
+  margin-top: 0.625rem;
 }
 @media screen and (min-width: 768px) {
   .about__bandbio {
@@ -527,7 +529,7 @@ footer {
 .about__bandname {
   font-size: 1rem;
   color: #323232;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media screen and (min-width: 768px) {
   .about__bandname {
@@ -622,18 +624,14 @@ footer {
     padding: 1.875rem;
   }
 }
-.comments__container h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.25rem;
-  color: #323232;
-  font-weight: 500;
-}
+
 @media screen and (min-width: 1280px) {
-  .comments__container h2 {
-    font-size: 2.125rem;
+  .comments__container-title {
+    margin-left: 30px;
   }
 }
-.comments__container .comments__form {
+
+.comments__form {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -641,16 +639,16 @@ footer {
   width: 100%;
 }
 @media screen and (min-width: 1280px) {
-  .comments__container .comments__form {
+  .comments__form {
     width: 50%;
     margin-top: 3.125rem;
   }
 }
-.comments__container .comments__form label {
+.comments__form label {
   display: flex;
   flex-direction: column;
 }
-.comments__container .comments__form input[name=name] {
+.comments__form input[name=name] {
   padding: 0.625rem;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #ccc;
@@ -659,11 +657,7 @@ footer {
   width: 75%;
   margin-left: 0.625rem;
 }
-.comments__container .comments__form input[name=name]:focus {
-  outline: none;
-  border-color: blue;
-}
-.comments__container .comments__form input[name=comment] {
+.comments__form input[name=comment] {
   padding: 0.625rem;
   border-radius: 0.3125rem;
   border: 0.0625rem solid #ccc;
@@ -674,8 +668,8 @@ footer {
   padding-bottom: 6.25rem;
   margin-left: 3.75rem;
 }
-.comments__container .comments__form .comments__label-name,
-.comments__container .comments__form .comments__label-comment {
+.comments__form .comments__label-name,
+.comments__form .comments__label-comment {
   font-size: 0.6875rem;
   color: #AFAFAF;
   display: flex;
@@ -683,21 +677,22 @@ footer {
   padding: 0.3125rem;
   font-weight: 600;
 }
-.comments__container .comments__form .input-with-icon {
+.comments__form .input-with-icon {
   display: flex;
   align-items: center;
 }
-.comments__container .comments__form .input-with-icon img {
+.comments__form .input-with-icon img {
   margin-right: 0.625rem;
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
 }
-.comments__container button {
+
+button {
   padding: 0.625rem;
   border-radius: 0.3125rem;
   background-color: #323232;
-  color: white;
+  color: #FFFFFF;
   font-size: 1rem;
   cursor: pointer;
   width: 75%;
@@ -706,20 +701,17 @@ footer {
   border: none;
 }
 @media screen and (min-width: 768px) {
-  .comments__container button {
+  button {
     width: 20%;
-    margin-left: 27.5rem;
+    margin-left: 25.5rem;
   }
 }
 @media screen and (min-width: 1280px) {
-  .comments__container button {
+  button {
     width: 25%;
     height: 100%;
     margin-left: 20.9375rem;
   }
-}
-.comments__container button:hover {
-  background-color: darkblue;
 }
 
 .comments {

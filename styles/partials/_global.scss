@@ -13,7 +13,7 @@ body {
 }
 .header {
   background-color: $primaryblack;
-  color:#E1E1E1;
+  color: #e1e1e1;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -53,11 +53,13 @@ body {
     display: inline-flex;
     align-items: baseline;
     margin-right: 25rem;
-    width:50%;
+    width: 50%;
   }
 }
 
-.header__logo {margin-left: .625rem;}
+.header__logo {
+  margin-left: 0.625rem;
+}
 
 .header__title {
   text-decoration: none;
@@ -81,16 +83,13 @@ body {
     display: flex;
     text-decoration: none;
     justify-content: flex-start;
-    width:40%;
-    margin-left: .625rem;
-    
-    
+    width: 40%;
+    margin-left: 0.625rem;
   }
   @include desktop {
     border-bottom: none;
     display: flex;
     text-decoration: none;
-    
   }
 }
 
@@ -103,16 +102,20 @@ body {
 
 .header__menu-list {
   width: 40%;
-  border-bottom: .125rem solid $primaryblack;
+  border-bottom: 0.125rem solid $primaryblack;
   padding-bottom: 1rem;
-  
+
   &--active {
-    color:white;
-    border-color:white;
-    @include tablet {width: fit-content;
-    border-bottom: .25rem solid white;}
-  @include desktop {width: fit-content;
-    border-bottom: .25rem solid white;}
+    color: $primarywhite;
+    border-color: $primarywhite;
+    @include tablet {
+      width: fit-content;
+      border-bottom: 0.25rem solid $primarywhite;
+    }
+    @include desktop {
+      width: fit-content;
+      border-bottom: 0.25rem solid $primarywhite;
+    }
   }
 }
 footer {
@@ -130,12 +133,12 @@ footer {
 }
 
 .footer__text {
-  margin-left: .625rem;
+  margin-left: 0.625rem;
   padding-bottom: 1rem;
   display: flex;
   flex-wrap: wrap;
   font-weight: 300;
-  padding-bottom: .625rem;
+  padding-bottom: 0.625rem;
   flex-direction: column;
   align-items: flex-start;
   gap: 1.25rem;
@@ -145,22 +148,23 @@ footer {
     flex-wrap: wrap;
     align-items: baseline;
     margin-left: 0;
-    width:100%;
+    width: 100%;
   }
   @include desktop {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
     margin-top: 5.625rem;
-    width:100%;
+    width: 100%;
     margin-left: -4.375rem;
   }
 }
 
 .footer__socialmedia {
+  img {
+    margin-right: 1.25rem;
+  }
 
-  img {margin-right:1.25rem;}
-  
   @include tablet {
     left: 15.625rem;
     bottom: 2.5rem;
@@ -183,7 +187,7 @@ a {
 
 .footer__title {
   padding-top: 1.5rem;
-  padding-bottom: .625rem;
+  padding-bottom: 0.625rem;
   font-weight: 500;
 
   @include tablet {
@@ -204,7 +208,7 @@ a {
 .footer__manager,
 .footer__bookingagent-pearl,
 .footer__bookingagent-carson {
-  padding-bottom:.625rem;
+  padding-bottom: 0.625rem;
   @include tablet {
     width: 50%;
   }
@@ -227,15 +231,15 @@ a {
   }
 }
 .footer__copyright {
-  font-size: .6875rem;
+  font-size: 0.6875rem;
   @include tablet {
     position: relative;
-    margin-bottom: 1.25rem;
     left: 2.5rem;
+    margin-top: -40px;
   }
   @include desktop {
-    margin-left: 13rem;
-    font-size: .75rem;
+    margin-left: 13.5rem;
+    font-size: 0.75rem;
   }
 }
 .footer__containers {
@@ -263,15 +267,15 @@ a {
   font-weight: 500;
   white-space: nowrap;
   margin-right: 1.25rem;
-  padding-bottom: .625rem;
+  padding-bottom: 0.625rem;
 }
 .footer__manager-email,
 .footer__bookingagent-carson-email,
 .footer__bookingagent-pearl-email {
   color: $primarywhite;
   text-decoration: none;
-  margin-top: .625rem;
-  margin-bottom: .625rem;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
 }
 .footer__bookingagent-carson-container {
   @include tablet {
