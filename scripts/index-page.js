@@ -1,86 +1,113 @@
 
-const commentInfo = [
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    comment: "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    img: "assets/images/gray image.jpeg"
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    comment: "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    img: "assets/images/gray image.jpeg"
-  },
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    comment: " I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-    img: "assets/images/gray image.jpeg"
-  },
-];
-console.log(commentInfo);
+const apiKey = `?api_key=5a3fa11d-8c58-4c11-bd97-4c292d09c0d6`;
+const apiBaseUrl = 'https://project-1-api.herokuapp.com/';
 
-function displayComment(commentsArray) {
-  const commentSection = document.getElementById("comment-section");
-  commentSection.innerHTML = '';
 
-  for (let i = commentsArray.length - 1; i >= 0; i--) {
-    const comment = document.createElement("div");
-    comment.classList.add("comment");
-    commentSection.appendChild(comment);
 
-    const commentImg = document.createElement("div");
-    commentImg.classList.add("commentImg");
-    commentImg.style.backgroundImage = `url('assets/images/gray image.jpeg')`;
-    comment.appendChild(commentImg);
+let comments = [];
 
-    const commentName = document.createElement("div");
-    commentName.classList.add("commentName");
-    comment.appendChild(commentName);
 
-    const name = document.createElement("div");
-    name.innerHTML = commentsArray[i].name;
-    commentName.appendChild(name);
+function displayComment(comment) {
 
-    const commentDate = document.createElement("div");
-    commentDate.classList.add("commentDate");
-    commentName.appendChild(commentDate);
+  const commentEl = document.createElement("div");
+  commentEl.classList.add("comment");
 
-    const date = document.createElement("div");
-    date.innerHTML = commentsArray[i].date;
-    commentDate.appendChild(date);
+  const commentImg = document.createElement("div");
+  commentImg.classList.add("commentImg");
+  commentImg.style.backgroundImage = `url('assets/images/gray image.jpeg')`;
+  commentEl.appendChild(commentImg);
 
-    const commentText = document.createElement("div");
-    commentText.classList.add("commentText");
-    comment.appendChild(commentText);
+  const commentName = document.createElement("div");
+  commentName.classList.add("commentName");
+  commentEl.appendChild(commentName);
 
-    const text = document.createElement("p");
-    text.innerHTML = commentsArray[i].comment;
-    commentText.appendChild(text);
+  const personName = document.createElement("div");
+  personName.innerHTML = comment.name;
 
-    commentSection.insertBefore(comment, commentSection.firstChild);
+  commentName.appendChild(personName);
 
-  }
+  const commentDate = document.createElement("div");
+  commentDate.classList.add("commentDate");
+  commentName.appendChild(commentDate);
+
+  const date= new Date(comment.timestamp);
+  const formattedDate = date.toLocaleDateString("newDate",{
+   
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+    });
+    
+    const dateText = document.createElement("div");
+    dateText.innerHTML = formattedDate;
+    commentDate.appendChild(dateText);
+
+
+  const commentText = document.createElement("div");
+  commentText.classList.add("commentText");
+  commentEl.appendChild(commentText);
+
+  const text = document.createElement("p");
+  text.innerHTML = comment.comment;
+
+  commentText.appendChild(text);
+
+  return commentEl;
+
 }
 
-displayComment(commentInfo);
+
+axios
+  .get(`${apiBaseUrl}comments${apiKey}`)
+  .then((response) => {
+    console.log(response);
+
+    let comments = response.data.sort((a,b)=>
+    { return new Date(b.timestamp)-new Date(a.timestamp);
+    });
 
 
-
-
+    comments.forEach(comment => {
+      console.log(comment);
+      const commentEl = document.getElementById("comment-section");
+      const cardEl = displayComment(comment);
+      commentEl.appendChild(cardEl);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+  });
 const form = document.querySelector('.comments__form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault()
+})
+
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const img = "assets/images/gray image.jpeg";
-  const name = event.target.name.value;
-  const date = new Date().toLocaleDateString();
-  const comment = event.target.comment.value;
+  const cardInfo = {
+    name: event.target.elements.name.value,
+    comment: event.target.elements.comment.value
 
-  const newComment = { name, date, comment, img };
-  commentInfo.unshift(newComment);
-  displayComment(commentInfo);
+  }
+  axios
+    .post(`${apiBaseUrl}comments${apiKey}`, cardInfo)
+    .then((response) => {
+      comments.unshift(response.data);
+
+      const commentEl = document.querySelector(".comments");
+      const cardEl = displayComment(response.data);
+      commentEl.insertBefore(cardEl, commentEl.firstChild);
+
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  comments.unshift(cardInfo);
+  const commentEl = document.querySelector(".comments");
+  commentEl.insertBefore(cardEl, commentEl.firstChild);
   event.target.reset();
 });

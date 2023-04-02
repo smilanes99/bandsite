@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles/bio.css" rel="stylesheet" />
+    <script defer src="https://unpkg.com/axios/dist/axios.min.js" type="text/javascript"></script>
     <script src="./scripts/index-page.js" type="text/javascript" defer></script>
     <title>Bandsite</title>
 </head>
@@ -23,7 +24,7 @@
                     <a class="header__menu" href="index.html"> Biography</a>
                 </li>
                 <li class="header__menu-list">
-                    <a class="header__menu" href="shows.html"> Shows</a>
+                    <a class="header__menu" href="pages/shows.html"> Shows</a>
                 </li>
             </ul>
         </div>
@@ -95,10 +96,8 @@
             </div>
         </section>
     </div>
+    <h2 class="comments__container-title">Join the Converstion</h2>
     <section class="comments__container">
-        <div class="comments__container-title">
-            <h2>Join the Converstion</h2>
-        </div>
         <form class="comments__form" novalidate>
             <label>
                 <div class="comments__label-name">
@@ -116,7 +115,9 @@
             <button>COMMENT</button>
         </form>
     </section>
-    <section class="comments" id="comment-section"></section>
+    <section class="comments" id="comment-section">
+        
+    </section>
 
     <footer>
         <section class="footer__text">
