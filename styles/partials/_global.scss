@@ -59,7 +59,9 @@ body {
 .header__logo {
   margin-left: 0.625rem;
   margin-top: 10px;
-  @include desktop {padding-top: 10px;}
+  @include desktop {
+    padding-top: 10px;
+  }
 }
 
 .header__title {

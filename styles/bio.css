@@ -462,13 +462,18 @@ footer {
   color: #323232;
   font-weight: 600;
 }
+@media screen and (min-width: 768px) {
+  .about__title {
+    padding: 1.25rem;
+    font-size: 2rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .about__title {
     position: relative;
-    left: -1.25rem;
-    font-size: 2.25rem;
+    font-size: 3.25rem;
     font-weight: 600;
-    margin-bottom: 1.875rem;
+    padding-bottom: 2.5625rem;
   }
 }
 
@@ -620,7 +625,7 @@ footer {
 }
 @media screen and (min-width: 768px) {
   .comments__container {
-    margin-left: 1.875rem;
+    margin-left: 4rem;
     padding-top: 1.875rem;
     width: 90%;
   }
@@ -721,7 +726,7 @@ button {
 @media screen and (min-width: 768px) {
   button {
     width: 20%;
-    margin-left: 25.5rem;
+    margin-left: 27rem;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -731,15 +736,27 @@ button {
     margin-left: 26.9375rem;
   }
 }
-button :hover {
-  background-color: #002ead;
+
+button:hover {
+  background-color: rgb(0, 0, 0);
 }
 
+.comments__container-title {
+  color: #323232;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comments__container-title {
+    margin-left: 2rem;
+    margin-top: 2.875rem;
+    font-size: 2rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   .comments__container-title {
     margin-left: 12.5rem;
     margin-top: 1.875rem;
-    font-weight: 500;
     font-size: 2.25rem;
   }
 }
@@ -805,17 +822,8 @@ button :hover {
   align-items: center;
   margin-top: 0.625rem;
   font-weight: 500;
-  width: 90%;
-}
-@media screen and (min-width: 1280px) {
-  .commentName {
-    white-space: nowrap;
-  }
-}
-@media screen and (min-width: 768px) {
-  .commentName {
-    margin-top: 0.3125rem;
-  }
+  width: 80%;
+  white-space: nowrap;
 }
 
 .commentText {
